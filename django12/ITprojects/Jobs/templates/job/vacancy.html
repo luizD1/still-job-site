@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class='container'>
+<div class='row'>
+{% for vacs in vac %}
+
+<div class="card" style="width: 15rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ vacs.job_name }}</h5>
+    <p class="card-text">{{ vacs.job_descrition}}</p>
+    <a href="{% url 'submit' %}" class="btn btn-primary">Apply Now</a>
+  </div>
+  
+</div>
+{% endfor %}
+
+</div>
+</div>
+
+
+
+
+{% endblock %}
